@@ -3,120 +3,91 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PAGNOX777 — Cassino Social</title>
+    <title>Fortune Tiger — Clone Social</title>
     <link rel="stylesheet" href="style.css">
-    <!-- Ícones externos para dar um visual profissional -->
     <link rel="stylesheet" href="https://cloudflare.com">
 </head>
 <body>
 
-    <div class="app-container">
+    <div class="game-wrapper">
         
-        <!-- TOPO / HEADER -->
-        <header class="app-header">
-            <div class="logo">♛ PAGNOX 777</div>
-            <div class="balance-container">
-                <i class="fa-solid fa-coins gold"></i>
-                <span id="balance-val">1.000</span>
-            </div>
+        <!-- BARRA DE TOPO -->
+        <header class="game-header">
+            <div class="back-btn"><i class="fa-solid fa-house"></i></div>
+            <div class="game-title">FORTUNE TIGER</div>
+            <div class="demo-badge">DEMO</div>
         </header>
 
-        <!-- BANNER PRINCIPAL (ROTATIVO OU ESTÁTICO) -->
-        <section class="hero-banner">
-            <div class="banner-content">
-                <h2>BÔNUS DE BOAS-VINDAS</h2>
-                <p>Explore jogos em modo demonstração 100% gratuito!</p>
-                <button class="btn-banner">Jogar Agora</button>
-            </div>
-        </section>
-
-        <!-- BARRA DE AVISOS CORRIDOS (TICKER) -->
-        <div class="ticker-wrap">
-            <div class="ticker">
-                <i class="fa-solid fa-bullhorn"></i>
-                <span>Usuário Visitante acabou de girar o Tigrinho...</span>
-                <span>• Protótipo 100% gratuito sem dinheiro real...</span>
-            </div>
-        </div>
-
-        <!-- CATEGORIAS -->
-        <nav class="categories-nav">
-            <button class="cat-btn active"><i class="fa-solid fa-fire"></i> Populares</button>
-            <button class="cat-btn"><i class="fa-solid fa-gamepad"></i> Slots</button>
-            <button class="cat-btn"><i class="fa-solid fa-heart"></i> Favoritos</button>
-        </nav>
-
-        <!-- GRID DE JOGOS -->
-        <main class="games-grid">
+        <!-- TELA DO TIGRINHO (ESTILO APP) -->
+        <main class="tiger-screen">
             
-            <!-- Card Jogo 1 -->
-            <div class="game-card">
-                <div class="game-thumb tiger-bg">🐯</div>
-                <div class="game-info">
-                    <h3>Tigrinho Social</h3>
-                    <button class="btn-play">Demonstração</button>
+            <!-- Personagem do Tigrinho Animado -->
+            <div class="tiger-character-box">
+                <div id="tiger-emoji" class="tiger-avatar">🐯</div>
+                <div id="bubble-speech" class="speech-bubble">Solte o Tigre! ⚡</div>
+            </div>
+
+            <!-- Moldura de Ouro do Slot (Grade 3x3 igual ao real) -->
+            <div class="slot-gold-frame">
+                <div class="slot-grid">
+                    <!-- Linha 1 -->
+                    <div class="slot-cell" id="c00">🍊</div>
+                    <div class="slot-cell" id="c01">🧧</div>
+                    <div class="slot-cell" id="c02">🪙</div>
+                    <!-- Linha 2 -->
+                    <div class="slot-cell" id="c10">💎</div>
+                    <div class="slot-cell" id="c11">🐯</div>
+                    <div class="slot-cell" id="c12">🍊</div>
+                    <!-- Linha 3 -->
+                    <div class="slot-cell" id="c20">🪙</div>
+                    <div class="slot-cell" id="c21">💎</div>
+                    <div class="slot-cell" id="c22">🧧</div>
                 </div>
             </div>
 
-            <!-- Card Jogo 2 -->
-            <div class="game-card">
-                <div class="game-thumb rabbit-bg">🐰</div>
-                <div class="game-info">
-                    <h3>Coelho da Sorte</h3>
-                    <button class="btn-play">Demonstração</button>
-                </div>
-            </div>
-
-            <!-- Card Jogo 3 -->
-            <div class="game-card">
-                <div class="game-thumb dragon-bg">🐉</div>
-                <div class="game-info">
-                    <h3>Dragão Dourado</h3>
-                    <button class="btn-play">Demonstração</button>
-                </div>
-            </div>
-
-            <!-- Card Jogo 4 -->
-            <div class="game-card">
-                <div class="game-thumb treasure-bg">💎</div>
-                <div class="game-info">
-                    <h3>Tesouro Tropical</h3>
-                    <button class="btn-play">Demonstração</button>
-                </div>
+            <!-- Placar de Status de Vitória -->
+            <div class="win-display">
+                <span id="status-text">FAÇA SEU GIRO!</span>
             </div>
 
         </main>
 
-        <!-- FOOTER AVISO -->
-        <footer class="app-footer">
-            <p>© 2026 PAGNOX777</p>
-            <p>Apenas simulador visual. Sem transações financeiras.</p>
-        </footer>
+        <!-- CONTROLES E BOTÕES DE APOSTA -->
+        <section class="control-footer">
+            
+            <!-- Linha de Saldo e Informações -->
+            <div class="info-bar">
+                <div class="info-box">
+                    <span class="info-label">SALDO</span>
+                    <span class="info-value text-green">R$ <span id="balance-display">1000.00</span></span>
+                </div>
+                <div class="info-box">
+                    <span class="info-label">GANHO</span>
+                    <span class="info-value text-gold">R$ <span id="win-display-val">0.00</span></span>
+                </div>
+            </div>
 
-        <!-- MENU INFERIOR FIXO (ESTILO APP) -->
-        <nav class="bottom-nav">
-            <a href="#" class="nav-item active">
-                <i class="fa-solid fa-house"></i>
-                <span>Início</span>
-            </a>
-            <a href="#" class="nav-item">
-                <i class="fa-solid fa-gift"></i>
-                <span>Promoções</span>
-            </a>
-            <a href="#" class="nav-item center-item">
-                <div class="spin-icon">🎰</div>
-            </a>
-            <a href="#" class="nav-item">
-                <i class="fa-solid fa-wallet"></i>
-                <span>Carteira</span>
-            </a>
-            <a href="#" class="nav-item">
-                <i class="fa-solid fa-user"></i>
-                <span>Perfil</span>
-            </a>
-        </nav>
+            <!-- Painel de Disparo e Ajuste -->
+            <div class="action-panel">
+                <div class="bet-selector">
+                    <button class="bet-btn" onclick="changeBet(-2)">-</button>
+                    <div class="bet-number">
+                        <span class="bet-label">APOSTA</span>
+                        <span class="bet-amount">R$ <span id="bet-display">10.00</span></span>
+                    </div>
+                    <button class="bet-btn" onclick="changeBet(2)">+</button>
+                </div>
+
+                <!-- Botão de Girar Grande e Laranja -->
+                <button id="spin-button" class="spin-trigger" onclick="triggerSpin()">
+                    <i class="fa-solid fa-play"></i>
+                </button>
+            </div>
+
+        </section>
 
     </div>
 
+    <script src="script.js"></script>
 </body>
 </html>
