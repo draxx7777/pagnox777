@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#080a12">
+<title>PAGNOX777 — Cassino Social</title>
+<style>
+:root{--bg:#080a12;--panel:#111522;--panel2:#171c2b;--gold:#ffbd28;--gold2:#ff8b19;--red:#a51b25;--muted:#9ba4b8;--line:#34394a}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(ellipse at top,#251018 0,#080a12 50%);color:#f8f8fc;font:15px/1.45 system-ui,-apple-system,Segoe UI,Roboto,sans-serif}
+button,input{font:inherit}button{cursor:pointer;border:0}.wrap{max-width:1250px;margin:auto;padding:18px}.top{display:flex;align-items:center;gap:20px;justify-content:space-between;background:#0b0e17eF;border:1px solid #68491c;border-radius:16px;padding:14px 18px;position:sticky;top:8px;z-index:5;backdrop-filter:blur(12px)}.brand{font-size:clamp(20px,3vw,30px);font-weight:950;letter-spacing:-1px}.brand span{color:var(--gold)}.nav{display:flex;gap:8px;flex-wrap:wrap}.nav button,.pill{background:#1a2030;color:#e9eaf0;border:1px solid #30374b;border-radius:10px;padding:9px 13px}.nav button.active,.primary{background:linear-gradient(135deg,var(--gold),var(--gold2));color:#1b1205;font-weight:800;border-color:transparent}.balance{background:#201b10;border:1px solid #76561b;padding:10px 13px;border-radius:12px;white-space:nowrap}.hero{margin:18px 0;display:grid;grid-template-columns:1.35fr .65fr;gap:16px}.hero-main{min-height:280px;border:1px solid #6c4518;border-radius:18px;overflow:hidden;padding:32px;background:radial-gradient(circle at 78% 45%,#9f361c 0,#3b131c 33%,#11121d 74%);position:relative}.hero-main:after{content:"🐯";font-size:clamp(120px,22vw,240px);position:absolute;right:3%;bottom:-18px;filter:drop-shadow(0 10px 24px #ff9e1b55);opacity:.9}.eyebrow{color:var(--gold);font-weight:800;text-transform:uppercase;letter-spacing:2px;font-size:12px}.hero h1{font-size:clamp(34px,5vw,62px);line-height:1.02;margin:10px 0;max-width:560px;position:relative;z-index:1}.hero p{color:#e0d7d7;max-width:440px;position:relative;z-index:1}.hero .primary{padding:13px 22px;border-radius:10px;position:relative;z-index:1}.sidebox,.panel{background:linear-gradient(145deg,#151a29,#0e111b);border:1px solid var(--line);border-radius:16px;padding:18px}.sidebox h3,.panel h2{margin:0 0 12px}.sidebox p{color:var(--muted);font-size:13px}.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:9px;margin-top:14px}.stat{background:#0b0e17;border:1px solid #282e40;border-radius:10px;padding:12px}.stat b{display:block;color:var(--gold);font-size:19px}.stat small{color:var(--muted)}.section-head{display:flex;justify-content:space-between;align-items:center;gap:10px;margin:24px 0 12px}.section-head h2{margin:0;font-size:22px}.section-head span{color:var(--muted);font-size:13px}.games{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}.game{border:1px solid #34394b;background:linear-gradient(160deg,#202536,#111522);border-radius:14px;padding:12px;text-align:left;color:white;transition:transform .15s,border-color .15s}.game:hover{transform:translateY(-3px);border-color:var(--gold)}.game-art{height:105px;display:grid;place-items:center;border-radius:10px;background:radial-gradient(circle at 50% 20%,#a33a1c,#341522 70%);font-size:58px;margin-bottom:10px}.game:nth-child(2) .game-art{background:radial-gradient(circle,#6a2b8a,#21172e)}.game:nth-child(3) .game-art{background:radial-gradient(circle,#9b6a1a,#2e1c14)}.game:nth-child(4) .game-art{background:radial-gradient(circle,#186a63,#13252b)}.game b{display:block}.game small{color:var(--muted)}.layout{display:grid;grid-template-columns:1.3fr .7fr;gap:16px;margin-top:22px}.slot{background:linear-gradient(160deg,#22121b,#0c101b);border:1px solid #78511c;border-radius:16px;padding:18px}.slot-top{display:flex;justify-content:space-between;align-items:center;gap:12px}.slot-top h2{margin:0}.demo-tag{font-size:11px;color:#14100a;background:var(--gold);border-radius:99px;padding:5px 9px;font-weight:900}.reels{display:flex;gap:10px;justify-content:center;margin:20px auto;background:#080a10;border:3px solid #8d581c;border-radius:15px;padding:12px;max-width:440px}.reel{width:30%;height:108px;display:grid;place-items:center;font-size:clamp(38px,6vw,62px);background:linear-gradient(#fce5a0,#fff8e7,#f3c75d);border-radius:8px;box-shadow:inset 0 0 0 2px #9b6a20;color:#15100b}.controls{display:flex;justify-content:center;align-items:center;gap:10px;flex-wrap:wrap}.controls button{padding:12px 17px;border-radius:10px}.secondary{background:#252c3d;color:#fff;border:1px solid #3b4359}.notice{background:#0d1720;border:1px solid #254d52;color:#b7e9e5;border-radius:10px;padding:11px;font-size:12px;margin-top:14px}.result{text-align:center;min-height:28px;color:var(--gold);font-weight:800;margin-top:12px}.profile-row{display:flex;justify-content:space-between;padding:12px 0;border-bottom:1px solid #2c3140;gap:12px}.profile-row:last-child{border:0}.muted{color:var(--muted)}footer{text-align:center;color:#828b9e;padding:32px 10px;font-size:12px}.modal{position:fixed;inset:0;background:#000b;display:none;place-items:center;z-index:10;padding:18px}.modal.open{display:grid}.modal-card{width:min(420px,100%);background:#111522;border:1px solid #78511c;border-radius:16px;padding:22px}.modal-card input{width:100%;margin:7px 0 12px;padding:12px;background:#080a12;border:1px solid #353b4d;border-radius:9px;color:white}.modal-card button{padding:11px 14px;border-radius:9px;margin-top:5px}.close{float:right;background:transparent;color:#fff;font-size:23px}.empty{display:none}
+@media(max-width:850px){.hero{grid-template-columns:1fr}.layout{grid-template-columns:1fr}.games{grid-template-columns:repeat(2,minmax(0,1fr))}.nav{display:none}.hero-main{padding:24px;min-height:300px}.hero-main:after{right:-5%;bottom:0;opacity:.55}.sidebox{display:none}}
+@media(max-width:420px){.wrap{padding:10px}.top{padding:11px}.balance{font-size:12px;padding:8px}.games{gap:8px}.game{padding:8px}.game-art{height:85px;font-size:48px}.stats{grid-template-columns:1fr}.hero-main{padding:20px}.hero h1{font-size:37px}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header class="top">
+  <div class="brand">♛ PAGNOX<span>777</span></div>
+  <nav class="nav" aria-label="Navegação"><button class="active" data-scroll="inicio">⌂ Início</button><button data-scroll="jogos">▦ Jogos</button><button data-scroll="demo">🎰 Jogo demo</button><button data-scroll="conta">♙ Minha conta</button></nav>
+  <div class="balance">🪙 <strong id="balance">1.000</strong> créditos</div>
+</header>
+<main>
+<section class="hero" id="inicio">
+  <div class="hero-main">
+    <div class="eyebrow">Diversão em modo social</div>
+    <h1>Bem-vindo ao<br><span style="color:#ffbd28">PAGNOX777</span></h1>
+    <p>Explore jogos de demonstração com créditos virtuais gratuitos. Sem depósitos, sem apostas em dinheiro e sem saques.</p>
+    <button class="primary" onclick="document.getElementById('demo').scrollIntoView({behavior:'smooth'})">EXPERIMENTAR AGORA →</button>
+  </div>
+  <aside class="sidebox">
+    <h3>✨ Seu espaço de diversão</h3>
+    <p>Uma experiência social inspirada nos lobbies de jogos asiáticos, criada para entretenimento demonstrativo.</p>
+    <div class="stats"><div class="stat"><b>100%</b><small>gratuito</small></div><div class="stat"><b>0 R$</b><small>dinheiro real</small></div><div class="stat"><b>24/7</b><small>protótipo local</small></div></div>
+  </aside>
+</section>
+<div class="section-head" id="jogos"><h2>🔥 Jogos em destaque</h2><span>Todos em modo demonstração</span></div>
+<section class="games">
+  <button class="game" onclick="openGame('Tigrinho Social')"><div class="game-art">🐯</div><b>Tigrinho Social</b><small>Giros demonstrativos</small></button>
+  <button class="game" onclick="openGame('Coelho da Sorte')"><div class="game-art">🐰</div><b>Coelho da Sorte</b><small>Jogo casual</small></button>
+  <button class="game" onclick="openGame('Dragão Dourado')"><div class="game-art">🐉</div><b>Dragão Dourado</b><small>Fortuna temática</small></button>
+  <button class="game" onclick="openGame('Tesouro Tropical')"><div class="game-art">💎</div><b>Tesouro Tropical</b><small>Combinações coloridas</small></button>
+</section>
+<div class="layout">
+<section class="slot" id="demo">
+  <div class="slot-top"><h2>🐯 Tigrinho Social</h2><span class="demo-tag">MODO DEMO</span></div>
+  <p class="muted">Teste a animação e as combinações usando somente créditos virtuais fictícios.</p>
+  <div class="reels" aria-label="Rolos demonstrativos"><div class="reel" id="r1">🐯</div><div class="reel" id="r2">🧧</div><div class="reel" id="r3">🪙</div></div>
+  <div class="controls"><button class="secondary" id="minus" onclick="changeBet(-10)">− 10</button><span>Créditos por giro: <b id="bet">10</b></span><button class="secondary" id="plus" onclick="changeBet(10)">+ 10</button><button class="primary" id="spin" onclick="spin()">GIRAR 🎰</button></div>
+  <div class="result" id="result" aria-live="polite">Boa diversão! Faça um giro de demonstração.</div>
+  <div class="notice">ℹ️ Protótipo social: os créditos não têm valor monetário, não podem ser comprados, transferidos ou sacados. Resultados apenas demonstrativos.</div>
+</section>
+<aside class="panel" id="conta">
+  <h2>♙ Minha conta demo</h2>
+  <p class="muted">Seu perfil fica apenas nesta sessão do navegador.</p>
+  <div class="profile-row"><span>Usuário</span><b id="username">Visitante</b></div>
+  <div class="profile-row"><span>Saldo virtual</span><b><span id="balance2">1.000</span> 🪙</b></div>
+  <div class="profile-row"><span>Giros realizados</span><b id="spins">0</b></div>
+  <button class="primary" style="width:100%;margin-top:14px" onclick="showModal()">Personalizar perfil</button>
+  <button class="secondary" style="width:100%;margin-top:8px" onclick="resetDemo()">Reiniciar demonstração</button>
+</aside>
+</div>
+</main>
+<footer>© 2026 PAGNOX777 · Protótipo de entretenimento social · Sem apostas ou pagamentos reais.<br>Este projeto é uma demonstração inicial; não possui contas reais, servidor, pagamentos nem persistência de dados.</footer>
+</div>
+<div class="modal" id="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+ <div class="modal-card"><button class="close" onclick="hideModal()" aria-label="Fechar">×</button><h2 id="modalTitle">Perfil de demonstração</h2><label for="nick">Nome de exibição</label><input id="nick" maxlength="24" placeholder="Ex.: Visitante777"><button class="primary" onclick="saveProfile()">Salvar perfil</button><button class="secondary" onclick="hideModal()">Cancelar</button><p class="muted" style="font-size:12px">Não informe senha, e-mail ou dados pessoais. O perfil é apenas visual.</p></div>
+</div>
+<script>
+let balance=1000, bet=10, spins=0, busy=false;
+const symbols=['🐯','🧧','🪙','🐉','💎','🏮','🍊'];
+const fmt=n=>n.toLocaleString('pt-BR');
+function render(){document.getElementById('balance').textContent=fmt(balance);document.getElementById('balance2').textContent=fmt(balance);document.getElementById('bet').textContent=bet;document.getElementById('spins').textContent=spins;document.getElementById('minus').disabled=bet<=10;document.getElementById('plus').disabled=bet>=100;document.getElementById('spin').disabled=busy||balance<bet}
+function changeBet(n){bet=Math.max(10,Math.min(100,bet+n));render()}
+function spin(){if(busy||balance<bet)return;busy=true;balance-=bet;render();document.getElementById('result').textContent='Girando…';let ticks=0;const timer=setInterval(()=>{for(let i=1;i<=3;i++)document.getElementById('r'+i).textContent=symbols[Math.floor(Math.random()*symbols.length)];ticks++;if(ticks>=9){clearInterval(timer);finishSpin()}},90)}
+function finishSpin(){const s=[1,2,3].map(i=>document.getElementById('r'+i).textContent);let reward=0;if(s[0]===s[1]&&s[1]===s[2])reward=bet*5;else if(s[0]===s[1]||s[1]===s[2]||s[0]===s[2])reward=bet*2;balance+=reward;spins++;busy=false;document.getElementById('result').textContent=reward?`Combinação demonstrativa! +${fmt(reward)} créditos virtuais.`:'Não houve combinação desta vez. Tente novamente no modo demo.';render()}
+function openGame(name){if(name==='Tigrinho Social'){document.getElementById('demo').scrollIntoView({behavior:'smooth'});return}document.getElementById('result').textContent=name+' estará disponível em uma próxima versão do protótipo.';document.getElementById('demo').scrollIntoView({behavior:'smooth'})}
+function showModal(){document.getElementById('modal').classList.add('open');document.getElementById('nick').focus()}
+function hideModal(){document.getElementById('modal').classList.remove('open')}
+function saveProfile(){const n=document.getElementById('nick').value.trim();document.getElementById('username').textContent=n||'Visitante';hideModal()}
+function resetDemo(){balance=1000;bet=10;spins=0;busy=false;document.getElementById('result').textContent='Demonstração reiniciada. Boa diversão!';['r1','r2','r3'].forEach((id,i)=>document.getElementById(id).textContent=['🐯','🧧','🪙'][i]);render()}
+document.querySelectorAll('[data-scroll]').forEach(b=>b.addEventListener('click',()=>{document.querySelectorAll('[data-scroll]').forEach(x=>x.classList.remove('active'));b.classList.add('active');document.getElementById(b.dataset.scroll).scrollIntoView({behavior:'smooth'})}));
+render();
+</script>
+</body>
+</html>
