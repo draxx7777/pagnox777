@@ -1,93 +1,78 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fortune Tiger — Clone Social</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cloudflare.com">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0a0907">
+  <meta name="description" content="Consulte informações sobre crédito pessoal com a Inova Cred pelo WhatsApp. Condições e aprovação sujeitas à análise.">
+  <title>Inova Cred | Crédito pessoal</title>
+  <style>
+    :root { color-scheme: dark; --ink:#f8f4e9; --muted:#c0b9aa; --gold:#e8bd4e; --gold2:#a87919; --line:#44391e; }
+    * { box-sizing:border-box; }
+    body { margin:0; font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif; color:var(--ink); background:radial-gradient(ellipse at 78% 38%,#231a08 0,transparent 38%),#090908; }
+    .wrap { width:min(1120px, calc(100% - 40px)); margin:auto; }
+    header { padding:22px 0; border-bottom:1px solid #ffffff12; }
+    .brand { display:flex; align-items:center; gap:12px; font-weight:850; letter-spacing:-.03em; font-size:1.2rem; }
+    .brand-name span:last-child { color:var(--gold); }
+    .mark { display:grid; place-items:center; width:42px; height:42px; color:var(--gold); border:1px solid var(--gold2); border-radius:13px; font-weight:900; }
+    main { min-height:calc(100vh - 154px); display:grid; grid-template-columns:1fr .82fr; align-items:center; gap:60px; padding:52px 0 74px; }
+    .eyebrow { color:var(--gold); text-transform:uppercase; letter-spacing:.16em; font-size:.76rem; font-weight:850; }
+    h1 { max-width:660px; margin:17px 0; font-size:clamp(2.7rem,6.7vw,5.2rem); line-height:.99; letter-spacing:-.06em; }
+    h1 em { color:var(--gold); font-style:normal; }
+    .intro { max-width:570px; color:var(--muted); font-size:1.1rem; line-height:1.7; }
+    .cta { display:inline-flex; align-items:center; justify-content:center; gap:10px; margin-top:22px; padding:16px 23px; border:1px solid #f5d46c; border-radius:12px; color:#171107; background:linear-gradient(135deg,#f0ce68,#be8d22); text-decoration:none; font-weight:850; box-shadow:0 8px 26px #d2a73530; transition:transform .15s,filter .15s; }
+    .cta:hover { filter:brightness(1.08); transform:translateY(-1px); }
+    .cta:focus-visible { outline:3px solid #f5d46c; outline-offset:3px; }
+    .trust { margin-top:18px; color:var(--muted); font-size:.86rem; }
+    .card { padding:29px; background:linear-gradient(145deg,#17150f,#0d0d0b); border:1px solid var(--line); border-radius:20px; box-shadow:0 18px 65px #0009; }
+    .card h2 { margin:0 0 20px; font-size:1.25rem; letter-spacing:-.02em; }
+    .step { display:grid; grid-template-columns:36px 1fr; gap:14px; padding:16px 0; border-top:1px solid #ffffff12; }
+    .num { display:grid; place-items:center; width:32px; height:32px; border:1px solid var(--gold2); border-radius:50%; color:var(--gold); font-size:.88rem; font-weight:800; }
+    .step strong { display:block; margin:2px 0 5px; }
+    .step p { margin:0; color:var(--muted); font-size:.92rem; line-height:1.5; }
+    .notice { margin-top:20px; padding:14px 15px; border:1px solid #6d5521; border-radius:12px; color:#d1c8b4; background:#201a0c; font-size:.82rem; line-height:1.55; }
+    footer { padding:24px 0 34px; border-top:1px solid #ffffff18; color:var(--muted); font-size:.82rem; line-height:1.6; }
+    footer p { margin:4px 0; }
+    @media(max-width:760px) { .wrap{width:min(100% - 32px,560px)} main{grid-template-columns:1fr;gap:34px;padding:44px 0 58px} h1{font-size:clamp(2.6rem,13vw,4rem)} .card{padding:24px} }
+  </style>
 </head>
 <body>
-
-    <div class="game-wrapper">
-        
-        <!-- BARRA DE TOPO -->
-        <header class="game-header">
-            <div class="back-btn"><i class="fa-solid fa-house"></i></div>
-            <div class="game-title">FORTUNE TIGER</div>
-            <div class="demo-badge">DEMO</div>
-        </header>
-
-        <!-- TELA DO TIGRINHO (ESTILO APP) -->
-        <main class="tiger-screen">
-            
-            <!-- Personagem do Tigrinho Animado -->
-            <div class="tiger-character-box">
-                <div id="tiger-emoji" class="tiger-avatar">🐯</div>
-                <div id="bubble-speech" class="speech-bubble">Solte o Tigre! ⚡</div>
-            </div>
-
-            <!-- Moldura de Ouro do Slot (Grade 3x3 igual ao real) -->
-            <div class="slot-gold-frame">
-                <div class="slot-grid">
-                    <!-- Linha 1 -->
-                    <div class="slot-cell" id="c00">🍊</div>
-                    <div class="slot-cell" id="c01">🧧</div>
-                    <div class="slot-cell" id="c02">🪙</div>
-                    <!-- Linha 2 -->
-                    <div class="slot-cell" id="c10">💎</div>
-                    <div class="slot-cell" id="c11">🐯</div>
-                    <div class="slot-cell" id="c12">🍊</div>
-                    <!-- Linha 3 -->
-                    <div class="slot-cell" id="c20">🪙</div>
-                    <div class="slot-cell" id="c21">💎</div>
-                    <div class="slot-cell" id="c22">🧧</div>
-                </div>
-            </div>
-
-            <!-- Placar de Status de Vitória -->
-            <div class="win-display">
-                <span id="status-text">FAÇA SEU GIRO!</span>
-            </div>
-
-        </main>
-
-        <!-- CONTROLES E BOTÕES DE APOSTA -->
-        <section class="control-footer">
-            
-            <!-- Linha de Saldo e Informações -->
-            <div class="info-bar">
-                <div class="info-box">
-                    <span class="info-label">SALDO</span>
-                    <span class="info-value text-green">R$ <span id="balance-display">1000.00</span></span>
-                </div>
-                <div class="info-box">
-                    <span class="info-label">GANHO</span>
-                    <span class="info-value text-gold">R$ <span id="win-display-val">0.00</span></span>
-                </div>
-            </div>
-
-            <!-- Painel de Disparo e Ajuste -->
-            <div class="action-panel">
-                <div class="bet-selector">
-                    <button class="bet-btn" onclick="changeBet(-2)">-</button>
-                    <div class="bet-number">
-                        <span class="bet-label">APOSTA</span>
-                        <span class="bet-amount">R$ <span id="bet-display">10.00</span></span>
-                    </div>
-                    <button class="bet-btn" onclick="changeBet(2)">+</button>
-                </div>
-
-                <!-- Botão de Girar Grande e Laranja -->
-                <button id="spin-button" class="spin-trigger" onclick="triggerSpin()">
-                    <i class="fa-solid fa-play"></i>
-                </button>
-            </div>
-
-        </section>
-
+  <header class="wrap">
+    <div class="brand">
+      <span class="mark" aria-hidden="true">IC</span>
+      <span class="brand-name">INOVA <span>CRED</span></span>
     </div>
+  </header>
 
-    <script src="script.js"></script>
+  <main class="wrap">
+    <section>
+      <div class="eyebrow">Inova Cred · Atendimento em Belo Horizonte</div>
+      <h1>Dinheiro na sua conta, com <em>clareza.</em></h1>
+      <p class="intro">Consulte pelo WhatsApp as opções de crédito pessoal disponíveis e tire suas dúvidas com a Inova Cred.</p>
+
+      <a class="cta" href="https://wa.me/5511939248972?text=Ol%C3%A1%2C%20gostaria%20de%20consultar%20informa%C3%A7%C3%B5es%20sobre%20empr%C3%A9stimo%20pessoal%20em%20Belo%20Horizonte." target="_blank" rel="noopener noreferrer" aria-label="Consultar empréstimo pessoal pelo WhatsApp">
+        <svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M20.5 3.5A11.8 11.8 0 0 0 12.1 0C5.6 0 .3 5.3.3 11.8c0 2.1.6 4.1 1.6 5.9L.2 24l6.5-1.7a11.8 11.8 0 0 0 5.4 1.3h.1c6.5 0 11.8-5.3 11.8-11.8 0-3.1-1.2-6-3.5-8.3ZM12.2 21.6a9.8 9.8 0 0 1-5-1.4l-.4-.2-3.9 1 1-3.8-.3-.4a9.8 9.8 0 1 1 8.6 4.8Zm5.4-7.3c-.3-.1-1.7-.8-2-.9-.3-.1-.5-.1-.7.2-.2.3-.8.9-1 .1-.2-.2-.4-.2-.7-.1-.3.1-1.2.4-2.3-.6-.8-.7-1.3-1.6-1.5-1.9-.2-.3 0-.5.1-.6l.5-.6.2-.5c.1-.2 0-.4 0-.5-.1-.1-.7-1.6-.9-2.1-.2-.5-.5-.4-.7-.4h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.4s1 2.8 1.1 3c.1.2 2 3.1 4.8 4.3.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.6-.1 1.7-.7 1.9-1.3.2-.7.2-1.2.2-1.3-.1-.2-.3-.3-.5-.4Z"/>
+        </svg>
+        Solicitar informações no WhatsApp
+      </a>
+      <p class="trust">Atendimento direto pelo número informado.</p>
+    </section>
+
+    <aside class="card" aria-label="Como funciona">
+      <h2>Fale com a Inova Cred</h2>
+      <div class="step"><span class="num">1</span><div><strong>Inicie a conversa</strong><p>Envie uma mensagem pelo WhatsApp para nosso atendimento.</p></div></div>
+      <div class="step"><span class="num">2</span><div><strong>Consulte as condições</strong><p>Tire dúvidas sobre valores, taxas, parcelas e prazos disponíveis.</p></div></div>
+      <div class="step"><span class="num">3</span><div><strong>Avalie com calma</strong><p>Leia o custo total e as condições antes de decidir contratar.</p></div></div>
+      <div class="notice">O envio de mensagem não garante aprovação nem contratação. Taxas, prazo, parcelas e disponibilidade dependem da análise e das condições apresentadas.</div>
+    </aside>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <p><strong>Inova Cred</strong> · Crédito pessoal · Atendimento informado para Belo Horizonte</p>
+      <p>Confira todas as condições, incluindo juros e Custo Efetivo Total (CET), antes de contratar. A aprovação depende de análise. Nunca faça depósito ou pagamento antecipado para liberar empréstimo.</p>
+    </div>
+  </footer>
 </body>
 </html>
